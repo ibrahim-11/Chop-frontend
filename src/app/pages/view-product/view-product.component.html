@@ -1,0 +1,42 @@
+
+
+
+
+<div class="container">
+    <h2> List des Produits</h2>
+        
+    <table class="table">
+      <thead>
+        <tr>
+          <th>product id</th>
+          <th>product name</th>
+          <th>product Price</th>
+          <th>product description</th>
+          <th>actions</th>
+       
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{p.id}}</td>
+          <td>{{p.nom}}</td>
+          <td>{{p.prix}}</td>
+          <td>{{p.description}}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="onEditProduct(p)">Edit</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-info" (click)="detail(p)">View</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" (click)="onDelete(p)">Delete</button>
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+    <button routerLink="/add" type="button" class="btn btn-success">Ajouter un produit</button>
+    <button routerLink="/transfert" type="button" class="btn btn-success">Transfert</button>
+  </div>
+
+
+
+  
+  
+
